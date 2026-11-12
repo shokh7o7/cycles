@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridian Cycles – Engineered Bicycles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="progress" aria-hidden="true"></div>
+
+  <div class="loader" aria-hidden="true">
+    <div class="gauge">
+      <div class="gauge-ring"></div>
+      <div class="gauge-inner">
+        <b class="speed"></b>
+        <span>km/h</span>
+      </div>
+    </div>
+    <p class="loader-text">MERIDIAN / SYSTEM CHECK</p>
+  </div>
+
+  <header class="header">
+    <a href="#top" class="logo">
+      <span class="logo-mark"></span>
+      MERIDIAN
+    </a>
+
+    <div class="header-right">
+      <button type="button" class="cart-btn" id="cartOpen" aria-label="Open cart">
+        CART <span class="cart-count" id="cartCount">0</span>
+      </button>
+
+      <input type="checkbox" id="menuToggle" class="menu-toggle">
+      <label for="menuToggle" class="menu-btn">
+        <span class="menu-word">MENU</span>
+        <span class="menu-lines"><span></span><span></span></span>
+      </label>
+    </div>
+  </header>
+
+  <nav class="overlay-menu" aria-label="Main">
+    <a href="#top"><span>01</span>Home</a>
+    <a href="#anatomy"><span>02</span>Anatomy</a>
+    <a href="#disciplines"><span>03</span>Disciplines</a>
+    <a href="#configure"><span>04</span>Configure</a>
+    <a href="#range"><span>05</span>The range</a>
+    <a href="#journal"><span>06</span>Journal</a>
+    <a href="#login"><span>07</span>Log in</a>
+  </nav>
+
+  <main>
+    <section class="hero" id="top">
+      <img class="hero-bg" src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=2000&q=80" alt="A grey fixed gear bicycle leaning on a black wall">
+      <p class="coords">41.2995° N / 69.2401° E — TASHKENT</p>
+
+      <div class="hero-content">
+        <p class="mono">[ 2026 COLLECTION ]</p>
+        <h1>
+          <span class="h-line"><span>Built to go</span></span>
+          <span class="h-line"><span class="orange">further.</span></span>
+        </h1>
+        <div class="hero-bottom">
+          <p>Hand-welded frames, precise geometry and parts chosen for one reason: they work. Bicycles engineered in Tashkent for city streets and mountain passes.</p>
+          <a href="#configure" class="btn">
+            Configure your bike
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="square"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-specs">
+        <div><span class="mono">FRAME</span><b>7.9 kg</b></div>
+        <div><span class="mono">GEARS</span><b>2 × 12</b></div>
+        <div><span class="mono">WARRANTY</span><b>Lifetime</b></div>
+        <div><span class="mono">ASSEMBLY</span><b>Handmade</b></div>
+      </div>
+    </section>
+
+    <section class="section blueprint" id="anatomy">
+      <div class="container">
+        <div class="section-head">
+          <p class="mono">02 — ANATOMY</p>
+          <h2>Every part has a job.</h2>
+        </div>
+
+        <div class="anatomy">
+          <ul class="parts">
+            <li class="pt-frame"><span class="mono">A</span><div><b>Frame</b><p>Double butted aluminium. Stiff where it matters, light everywhere else.</p></div></li>
+            <li class="pt-fork"><span class="mono">B</span><div><b>Carbon fork</b><p>Absorbs road buzz and keeps steering sharp.</p></div></li>
+            <li class="pt-wheels"><span class="mono">C</span><div><b>Wheels</b><p>Tubeless ready rims with sealed bearing hubs.</p></div></li>
+            <li class="pt-drive"><span class="mono">D</span><div><b>Drivetrain</b><p>Smooth 2 × 12 gearing for climbs and sprints.</p></div></li>
+            <li class="pt-cockpit"><span class="mono">E</span><div><b>Cockpit</b><p>Ergonomic bars and a saddle built for long days.</p></div></li>
+          </ul>
+
+          <div class="drawing">
+            <span class="dim dim-w mono">WHEELBASE 1012 mm</span>
+            <span class="dim dim-h mono">STACK 565 mm</span>
+            <svg class="bike-svg" viewBox="0 0 800 460" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-label="Technical drawing of a bicycle">
+              <g class="wheel" transform="translate(190 320)"><circle r="120" class="tyre" /><circle r="104" class="rim" /><g class="spokes"><path d="M-104 0H104M0 -104V104M-74 -74L74 74M-74 74L74 -74M-40 -96L40 96M-96 -40L96 40M-96 40L96 -40M-40 96L40 -96" /></g><circle r="10" class="hub" /></g><g class="wheel" transform="translate(610 320)"><circle r="120" class="tyre" /><circle r="104" class="rim" /><g class="spokes"><path d="M-104 0H104M0 -104V104M-74 -74L74 74M-74 74L74 -74M-40 -96L40 96M-96 -40L96 40M-96 40L96 -40M-40 96L40 -96" /></g><circle r="10" class="hub" /></g>
+              <g class="frame"><path d="M190 320 L370 320 M190 320 L330 150 M370 320 L330 140 M330 150 L560 155 M370 320 L575 200 M560 150 L575 200" /></g>
+              <g class="fork"><path d="M575 200 L610 320" /></g>
+              <g class="drive"><circle cx="370" cy="320" r="26" /><path d="M370 294 L190 308 M370 346 L190 332 M370 320 L392 360 M378 362 H406" /></g>
+              <g class="cockpit"><path d="M330 140 L322 108 M292 104 Q325 96 362 104 M560 150 L548 116 L604 112 Q622 114 618 138 Q614 150 600 148" /></g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="disciplines" id="disciplines">
+      <div class="disc-sticky">
+        <div class="disc-head">
+          <p class="mono">03 — DISCIPLINES</p>
+          <h2>Four ways to ride.</h2>
+        </div>
+        <div class="disc-track">
+          <article class="disc">
+            <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&w=1000&q=80" alt="Two cyclists riding road bikes near the shore">
+            <div class="disc-text"><span class="mono">01</span><h3>Road</h3><p>Fast, light and efficient on smooth tarmac.</p></div>
+          </article>
+          <article class="disc">
+            <img src="https://images.unsplash.com/photo-1681295692638-97ace05f56b4?auto=format&fit=crop&w=1000&q=80" alt="Two people riding bikes down a road">
+            <div class="disc-text"><span class="mono">02</span><h3>Gravel</h3><p>Wide tyres for roads that turn to dust.</p></div>
+          </article>
+          <article class="disc">
+            <img src="https://images.unsplash.com/photo-1534146789009-76ed5060ec70?auto=format&fit=crop&w=1000&q=80" alt="A man riding a mountain bike on a cliff">
+            <div class="disc-text"><span class="mono">03</span><h3>Mountain</h3><p>Suspension and grip for rocks and roots.</p></div>
+          </article>
+          <article class="disc">
+            <img src="https://images.unsplash.com/photo-1593764592116-bfb2a97c642a?auto=format&fit=crop&w=1000&q=80" alt="A black and grey city bicycle">
+            <div class="disc-text"><span class="mono">04</span><h3>City</h3><p>Upright, simple and ready for every day.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section configure" id="configure">
+      <input type="radio" name="model" id="mRoad" class="cfg-input" checked>
+      <input type="radio" name="model" id="mGravel" class="cfg-input">
+      <input type="radio" name="model" id="mCity" class="cfg-input">
+      <input type="radio" name="color" id="cGraphite" class="cfg-input" checked>
+      <input type="radio" name="color" id="cOrange" class="cfg-input">
+      <input type="radio" name="color" id="cSage" class="cfg-input">
+      <input type="radio" name="color" id="cIvory" class="cfg-input">
+
+      <div class="container">
+        <div class="section-head">
+          <p class="mono">04 — CONFIGURE</p>
+          <h2>Build your Meridian.</h2>
+        </div>
+
+        <div class="cfg">
+          <div class="cfg-stage">
+            <p class="cfg-name">
+              <span class="n-road">MERIDIAN R1</span>
+              <span class="n-gravel">MERIDIAN G1</span>
+              <span class="n-city">MERIDIAN C1</span>
+            </p>
+            <svg class="cfg-bike" viewBox="0 0 800 460" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <g class="wheel" transform="translate(190 320)"><circle r="120" class="tyre" /><circle r="104" class="rim" /><g class="spokes"><path d="M-104 0H104M0 -104V104M-74 -74L74 74M-74 74L74 -74M-40 -96L40 96M-96 -40L96 40M-96 40L96 -40M-40 96L40 -96" /></g><circle r="10" class="hub" /></g><g class="wheel" transform="translate(610 320)"><circle r="120" class="tyre" /><circle r="104" class="rim" /><g class="spokes"><path d="M-104 0H104M0 -104V104M-74 -74L74 74M-74 74L74 -74M-40 -96L40 96M-96 -40L96 40M-96 40L96 -40M-40 96L40 -96" /></g><circle r="10" class="hub" /></g>
+              <g class="frame"><path d="M190 320 L370 320 M190 320 L330 150 M370 320 L330 140 M330 150 L560 155 M370 320 L575 200 M560 150 L575 200" /></g>
+              <g class="fork"><path d="M575 200 L610 320" /></g>
+              <g class="drive"><circle cx="370" cy="320" r="26" /><path d="M370 294 L190 308 M370 346 L190 332 M370 320 L392 360 M378 362 H406" /></g>
+              <g class="cockpit"><path d="M330 140 L322 108 M292 104 Q325 96 362 104 M560 150 L548 116 L604 112 Q622 114 618 138 Q614 150 600 148" /></g>
+            </svg>
+          </div>
+
+          <div class="cfg-panel">
+            <p class="cfg-label mono">MODEL</p>
+            <div class="cfg-options">
+              <label for="mRoad">Road</label>
+              <label for="mGravel">Gravel</label>
+              <label for="mCity">City</label>
+            </div>
+
+            <p class="cfg-label mono">FRAME COLOR</p>
+            <div class="cfg-colors">
+              <label for="cGraphite" class="dot graphite" title="Graphite"><span>Graphite</span></label>
+              <label for="cOrange" class="dot orange-dot" title="Signal orange"><span>Signal orange</span></label>
+              <label for="cSage" class="dot sage" title="Sage"><span>Sage</span></label>
+              <label for="cIvory" class="dot ivory" title="Ivory"><span>Ivory</span></label>
+            </div>
+
+            <dl class="cfg-specs">
+              <div><dt class="mono">WEIGHT</dt><dd><span class="n-road">7.9 kg</span><span class="n-gravel">9.2 kg</span><span class="n-city">11.4 kg</span></dd></div>
+              <div><dt class="mono">GEARS</dt><dd><span class="n-road">2 × 12</span><span class="n-gravel">1 × 12</span><span class="n-city">1 × 8</span></dd></div>
+              <div><dt class="mono">TYRES</dt><dd><span class="n-road">28 mm</span><span class="n-gravel">42 mm</span><span class="n-city">35 mm</span></dd></div>
+            </dl>
+
+            <div class="cfg-buy">
+              <div class="n-road"><b>$1,890</b><button type="button" class="btn add-btn" data-name="Meridian R1" data-price="1890">Add to cart</button></div>
+              <div class="n-gravel"><b>$1,640</b><button type="button" class="btn add-btn" data-name="Meridian G1" data-price="1640">Add to cart</button></div>
+              <div class="n-city"><b>$890</b><button type="button" class="btn add-btn" data-name="Meridian C1" data-price="890">Add to cart</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="range">
+      <div class="container">
+        <div class="section-head row">
+          <div>
+            <p class="mono">05 — THE RANGE</p>
+            <h2>Full specification.</h2>
+          </div>
+          <p class="mono small">ALL PRICES IN USD · FREE ASSEMBLY</p>
+        </div>
+
+        <div class="table">
+          <div class="t-row t-head mono">
+            <span>MODEL</span><span>TYPE</span><span>WEIGHT</span><span>GEARS</span><span>PRICE</span><span></span>
+          </div>
+          <div class="t-row">
+            <span class="t-model"><img src="https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=300&q=80" alt="Black road bike">Meridian R1</span>
+            <span>Road</span><span class="mono">7.9 kg</span><span class="mono">2 × 12</span><span class="t-price">$1,890</span>
+            <button type="button" class="t-add add-btn" data-name="Meridian R1" data-price="1890">Add</button>
+          </div>
+          <div class="t-row">
+            <span class="t-model"><img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=300&q=80" alt="Grey bike">Meridian G1</span>
+            <span>Gravel</span><span class="mono">9.2 kg</span><span class="mono">1 × 12</span><span class="t-price">$1,640</span>
+            <button type="button" class="t-add add-btn" data-name="Meridian G1" data-price="1640">Add</button>
+          </div>
+          <div class="t-row">
+            <span class="t-model"><img src="https://images.unsplash.com/photo-1618762044398-ec1e7e048bbd?auto=format&fit=crop&w=300&q=80" alt="Black and red mountain bike">Meridian M1</span>
+            <span>Mountain</span><span class="mono">12.8 kg</span><span class="mono">1 × 12</span><span class="t-price">$2,150</span>
+            <button type="button" class="t-add add-btn" data-name="Meridian M1" data-price="2150">Add</button>
+          </div>
+          <div class="t-row">
+            <span class="t-model"><img src="https://images.unsplash.com/photo-1593764592116-bfb2a97c642a?auto=format&fit=crop&w=300&q=80" alt="City bicycle">Meridian C1</span>
+            <span>City</span><span class="mono">11.4 kg</span><span class="mono">1 × 8</span><span class="t-price">$890</span>
+            <button type="button" class="t-add add-btn" data-name="Meridian C1" data-price="890">Add</button>
+          </div>
+          <div class="t-row">
+            <span class="t-model"><img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=300&q=80" alt="Grey fixed gear bike">Meridian F0</span>
+            <span>Fixed gear</span><span class="mono">8.6 kg</span><span class="mono">1 × 1</span><span class="t-price">$690</span>
+            <button type="button" class="t-add add-btn" data-name="Meridian F0" data-price="690">Add</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="journal">
+      <div class="container">
+        <div class="section-head">
+          <p class="mono">06 — JOURNAL</p>
+          <h2>From the workshop.</h2>
+        </div>
+
+        <div class="journal">
+          <article class="j-item">
+            <span class="j-num">01</span>
+            <div class="j-text">
+              <p class="mono">ENGINEERING · 18 OCT 2026</p>
+              <h3>Why we still weld every frame by hand</h3>
+            </div>
+            <img src="https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=600&q=80" alt="Black road bike against a wooden wall">
+          </article>
+          <article class="j-item">
+            <span class="j-num">02</span>
+            <div class="j-text">
+              <p class="mono">ROUTES · 04 OCT 2026</p>
+              <h3>Chimgan in one day: a 160 km gravel loop</h3>
+            </div>
+            <img src="https://images.unsplash.com/photo-1444491741275-3747c53c99b4?auto=format&fit=crop&w=600&q=80" alt="Cyclist on a winding road under a cliff">
+          </article>
+          <article class="j-item">
+            <span class="j-num">03</span>
+            <div class="j-text">
+              <p class="mono">SERVICE · 21 SEP 2026</p>
+              <h3>Five checks before every ride</h3>
+            </div>
+            <img src="https://images.unsplash.com/photo-1631276893368-554b60393efb?auto=format&fit=crop&w=600&q=80" alt="Man riding a bicycle on a road">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="service">
+      <div class="container faq-grid">
+        <div class="section-head">
+          <p class="mono">07 — SERVICE</p>
+          <h2>Questions, answered.</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary><span class="mono">Q1</span>Which frame size do I need?</summary>
+            <p>Book a free fitting in our workshop. We measure your height, leg length and riding style.</p>
+          </details>
+          <details>
+            <summary><span class="mono">Q2</span>What does the lifetime warranty cover?</summary>
+            <p>Every frame is covered against manufacturing defects for as long as you own it.</p>
+          </details>
+          <details>
+            <summary><span class="mono">Q3</span>Do you service other brands?</summary>
+            <p>Yes. Our mechanics service any bicycle, from simple city bikes to full suspension.</p>
+          </details>
+          <details>
+            <summary><span class="mono">Q4</span>How long does delivery take?</summary>
+            <p>Stock models ship in two days. Custom colors are ready in three weeks.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section login-section" id="login">
+      <div class="container login-wrap">
+        <div>
+          <p class="mono">08 — RIDER ACCOUNT</p>
+          <h2>Log in.</h2>
+          <p class="login-lead">Track your order, book a service and save your configurations.</p>
+        </div>
+        <div class="login-card">
+          <div class="login">
+            <form id="loginForm">
+              <label for="loginName" class="mono">NAME</label>
+              <input type="text" id="loginName" placeholder="Your name">
+
+              <label for="loginPassword" class="mono">PASSWORD</label>
+              <input type="password" id="loginPassword" placeholder="Your password">
+
+              <button type="submit" class="btn">Log in</button>
+            </form>
+          </div>
+
+          <div class="welcome" id="welcome">
+            <p class="mono">ACCESS GRANTED</p>
+            <h3>Welcome, rider.</h3>
+            <p id="welcomeText"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top container">
+      <div class="footer-col">
+        <p class="mono">WORKSHOP</p>
+        <p>32 Bunyodkor Avenue<br>Tashkent, Uzbekistan</p>
+      </div>
+      <div class="footer-col">
+        <p class="mono">HOURS</p>
+        <p>Mon – Sat<br>09:00 – 19:00</p>
+      </div>
+      <div class="footer-col">
+        <p class="mono">PAGES</p>
+        <p><a href="#anatomy">Anatomy</a> · <a href="#configure">Configure</a> · <a href="#range">Range</a> · <a href="#journal">Journal</a></p>
+      </div>
+    </div>
+    <p class="footer-word" aria-hidden="true">MERIDIAN</p>
+    <div class="container footer-bottom mono">
+      <span>© 2026 MERIDIAN CYCLES</span>
+      <span>PHOTOS: UNSPLASH</span>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart" id="cart" aria-label="Shopping cart">
+    <div class="cart-head">
+      <p class="mono">YOUR ORDER</p>
+      <button type="button" class="cart-close" id="cartClose" aria-label="Close cart">CLOSE ×</button>
+    </div>
+
+    <p class="cart-empty" id="cartEmpty">No bikes selected yet.</p>
+    <ul class="cart-items" id="cartItems"></ul>
+
+    <div class="cart-foot">
+      <div class="cart-total">
+        <span class="mono">TOTAL</span>
+        <b id="cartTotal">$0</b>
+      </div>
+      <button type="button" class="btn" id="checkout">Place order</button>
+    </div>
+  </aside>
+
+  <div class="alert" id="alert" hidden>
+    <div class="alert-box" role="alertdialog" aria-modal="true" aria-labelledby="alertTitle" aria-describedby="alertText">
+      <span class="alert-icon mono" id="alertIcon">!</span>
+      <h3 class="alert-title" id="alertTitle"></h3>
+      <p class="alert-text" id="alertText"></p>
+      <button type="button" class="btn alert-btn" id="alertButton">Understood</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
